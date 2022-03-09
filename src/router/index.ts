@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 import Index from '../views/Index.vue'
 import Play from '../views/Play.vue'
+import About from '../views/About.vue'
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -11,6 +12,10 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/play',
 		component: Play,
+	},
+	{
+		path: '/about',
+		component: About,
 	}
 ]
 
