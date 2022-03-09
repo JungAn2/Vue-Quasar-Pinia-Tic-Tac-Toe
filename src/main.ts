@@ -9,6 +9,10 @@ import 'quasar/src/css/index.sass'
 import router from './router'
 // pinia store setup
 import { createPinia } from 'pinia'
+// vue axios setup
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 
 import App from './App.vue'
 
@@ -18,4 +22,6 @@ createApp(App)
 	.use(Quasar, {
 		plugins: {} // import Quasar plugins and add here.
 	})
+	.use(VueAxios, axios)
+	.provide('axios', App.config.globalProperties.axios)
 	.mount('#app')

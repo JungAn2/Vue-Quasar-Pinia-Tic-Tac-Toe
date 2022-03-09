@@ -12,10 +12,10 @@
 import Cell from "../components/Cell.vue";
 import { ref } from "vue";
 
-const X = ref(0)
+let X = 0
 const O = ref(0)
 
-const increate = ()=>{
+const increase = ()=>{
     X++;
 }
 </script>
