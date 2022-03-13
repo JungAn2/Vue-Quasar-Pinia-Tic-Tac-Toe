@@ -1,19 +1,20 @@
 <template>
+<layout>
   <div class="container">
-    <span>background</span>
-    <p>
-      No game no life anime<br />
-      Picture from<br />
-      https://www.wallpaperup.com/1046420/No_Game_No_Life_(4).html
-    </p>
-
     <span>Font</span>
     <p>
       Angeles by Billy Argel<br />
       https://www.fontspace.com/angeles-font-f61653
-    </p>
+    </p><br>
+    <span>Image</span>
+    <p>https://wallpaperaccess.com/cool-chess</p>
   </div>
+  </layout>
 </template>
+
+<script setup lang="ts">
+import layout from '../layout/default.vue'
+</script>
 
 <style scoped>
 .container {

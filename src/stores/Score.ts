@@ -1,19 +1,34 @@
 import { defineStore } from "pinia";
-import { ref } from 'vue'
+import { SessionStorage } from "quasar";
 
-export const score = defineStore('Score', {
+export const scoreStore = defineStore("score",{
+    /**
+     * Variables
+     * 
+     * @returns Values of each state variable
+     */
     state:()=>{
         return{
-            xScore:0,
-            oScore:0
+            Xscore: (SessionStorage.getItem("scoreX") || 0),
+            Oscore: (SessionStorage.getItem("scoreO") || 0)
+
         }
     },
+    getters:{
 
-    actions:()=>{
-        return{
-            increment(){
-                xScore++;
-            }
+    },
+    actions:{
+        /**
+         * Increase X score
+         */
+        increaseX(){
+            SessionStorage.set("scoreX", ++this.Xscore)
+        },
+        /**
+         * Increase O score
+         */
+        increaseO(){
+            SessionStorage.set("scoreO", ++this.Oscore)
         }
     }
 })
