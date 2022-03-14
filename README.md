@@ -4,8 +4,8 @@ https://github.com/orgs/Salisbury-University/teams/425-cybersecurity/discussions
 
 # To run the application
 
-> npm install
+  npm install
 
-> npm i axios
+  npm i axios
 
-> npm run dev
+  npm run dev
