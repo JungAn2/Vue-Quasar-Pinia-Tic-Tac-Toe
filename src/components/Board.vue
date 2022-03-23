@@ -11,7 +11,6 @@
         <div v-for="i in 3" class="row">
             <div v-for="j in 3">
                 <cell
-                    :key="i, j"
                     :row="i - 1"
                     :col="j - 1"
                     :letter="useboardStore.getCell(i - 1, j - 1)"
