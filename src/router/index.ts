@@ -20,7 +20,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-	history: createWebHistory(),
+	//Base imported from vite config ts
+	history: createWebHistory(import.meta.env.BASE_URL),
 	routes
 })
 
